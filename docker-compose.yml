@@ -1,0 +1,11 @@
+version: '2'
+services:
+  dovecot:
+    build:
+      context: docker
+      args:
+          dovecot_branch: release-2.2.27
+          pigeonhole_branch: release-0.4.16
+          dovecot_user_id: 801
+          dovenull_user_id: 802
+    restart: "always"

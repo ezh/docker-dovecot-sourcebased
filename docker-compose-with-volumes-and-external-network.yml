@@ -1,0 +1,30 @@
+version: '2'
+services:
+  dovecot:
+    build:
+      context: docker
+      args:
+          dovecot_branch: release-2.2.27
+          pigeonhole_branch: release-0.4.16
+          dovecot_user_id: 801
+          dovenull_user_id: 802
+    networks:
+      local:
+        ipv4_address: 10.0.0.1
+    restart: "always"
+    volumes:
+      - "dovecot-config:/etc/dovecot"
+      - "dovecot-spool:/var/spool/dovecot"
+volumes:
+  dovecot-config:
+    driver: local
+    driver_opts:
+      type: none
+      device: /data/dovecot/config
+      o: bind
+  dovecot-spool:
+    driver: local
+    driver_opts:
+      type: none
+      device: /data/dovecot/spool
+      o: bind
