@@ -19,5 +19,5 @@ before-install:
 script:
   - docker-compose -f docker-compose.yml -f docker-compose.travis.yml up -d
   - sleep 5
-  - docker-compose exec dovecot /bin/bash -c 'ps aux | awk "/^dovecot.*dovecot\/anvil/ {print \"TEST PASSED\"}' | grep PASSED
+  - docker-compose exec dovecot /bin/bash -c 'ps aux | awk "/^dovecot.*dovecot\/anvil/ {print \"TEST PASSED\"}"' | grep PASSED
   - docker-compose down
