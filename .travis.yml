@@ -11,7 +11,7 @@ env:
     - "COMMIT=${TRAVIS_COMMIT::8}"
     - "REPO=ezh1k/dovecot"
     - "TAG=$(if [ \"$TRAVIS_BRANCH\" == \"master\" ]; then echo \"latest\"; else echo $TRAVIS_BRANCH ; fi)"
-    - "GIT_TAG=$(git describe --tags)"
+    - "GIT_TAG=$(git describe --tags --abbrev=0)"
     - "DOCKER_VERSION=1.12.3"
     - "DOCKER_COMPOSE_VERSION=1.8.1"
 
