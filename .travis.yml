@@ -56,6 +56,6 @@ after_success:
     set -e
     docker images
     # publish if tag contains _ symbol
-    echo $GIT_TAG | grep -q '_' && docker push $REPO
+    echo $GIT_TAG | grep -qe '^v[0-9]' && docker push $REPO
     echo Success
 
