@@ -11,7 +11,7 @@ env:
     - "COMMIT=${TRAVIS_COMMIT::8}"
     - "REPO=ezh1k/dovecot"
     - "TAG=$(if [ \"$TRAVIS_BRANCH\" == \"master\" ]; then echo \"latest\"; else echo $TRAVIS_BRANCH ; fi)"
-    - "GIT_TAG=$(git describe --always)"
+    - "GIT_TAG=$(git describe --tags)"
     - "DOCKER_VERSION=1.12.3"
     - "DOCKER_COMPOSE_VERSION=1.8.1"
 
@@ -46,7 +46,7 @@ script:
     docker-compose exec dovecot /bin/bash -c 'ps aux | awk "/^dovecot.*dovecot\/anvil/ {print \"TEST PASSED\"}"' | grep PASSED
     docker-compose down
     docker tag dovecot:latest $REPO
-    docker tag $REPO $REPO:$TAG
+    docker tag $REPO $REPO:$GIT_TAG
   - echo -en 'travis_fold:end:build\\r'
 
 after_success:
@@ -54,6 +54,7 @@ after_success:
     # Publish image
     set -e
     docker images
-    [[ "$TAG" != "latest" ]] && docker push $REPO
+    # publish if tag contains _ symbol
+    echo $GIT_TAG | grep -q '_' && docker push $REPO
     echo Success
 
