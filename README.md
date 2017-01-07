@@ -1,5 +1,6 @@
-docker-dovecot-sourcebased [![Build Status](https://travis-ci.org/ezh/docker-dovecot-sourcebased.png?branch=master)](https://travis-ci.org/ezh/docker-dovecot-sourcebased) [![Pulls](https://img.shields.io/docker/pulls/ezh1k/dovecot.svg)](https://hub.docker.com/r/ezh1k/dovecot/) [![Releases](https://img.shields.io/github/release/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/releases) [![License](https://img.shields.io/github/license/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/LICENSE) 
+docker-dovecot-sourcebased
 ==========================
+[![Build Status](https://travis-ci.org/ezh/docker-dovecot-sourcebased.png?branch=master)](https://travis-ci.org/ezh/docker-dovecot-sourcebased) [![Pulls](https://img.shields.io/docker/pulls/ezh1k/dovecot.svg)](https://hub.docker.com/r/ezh1k/dovecot/) [![Releases](https://img.shields.io/github/release/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/releases) [![License](https://img.shields.io/github/license/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/LICENSE) 
 
 Docker compose source based dovecot with pigeonhole SOHO configuration
 
@@ -10,7 +11,7 @@ Pigeonhole source provided by https://github.com/dovecot/pigeonhole
 By default it builds the stable *dovecot-2.2.27* (2016 dec 03) and stable *pigeonhole-0.4.16* (2016 oct 31) if you use docker compose.
 It builds the latest unstable *master* if you build directly from Dockerfile.
 
-[Hint #1](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/docker/Dockerfile#L30),
+[Hint #1](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/docker/Dockerfile#L44),
 [Hint #2](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/docker-compose.yml#L7)
 
 Image is based on `debian/jessie`, the same as an official Jenkis docker container.
