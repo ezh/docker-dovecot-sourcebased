@@ -5,7 +5,8 @@ language: java
 branches:
   only:
     - master
-
+  except:
+    - /^v[0-9]/
 env:
   global:
     - "COMMIT=${TRAVIS_COMMIT::8}"
@@ -46,7 +47,7 @@ script:
     docker-compose exec dovecot /bin/bash -c 'ps aux | awk "/^dovecot.*dovecot\/anvil/ {print \"TEST PASSED\"}"' | grep PASSED
     docker-compose down
     docker tag dovecot:latest $REPO
-    docker tag $REPO $REPO:$GIT_TAG-$TRAVIS_BUILD_NUMBER
+    docker tag $REPO $REPO:$GIT_TAG
   - echo -en 'travis_fold:end:build\\r'
 
 after_success:
