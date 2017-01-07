@@ -43,11 +43,11 @@ RUN set -x && \
     cd /opt/dovecot/ && git init . && git remote add -t ${dovecot_branch} origin https://github.com/dovecot/core && \
     git fetch --depth=1 && git checkout ${dovecot_branch} && ./autogen.sh && \
     ./configure ${dovecot_config} && \
-    make && make install && cd .. && mkdir /opt/pigeonhole/ && \
+    make -s && make install && cd .. && mkdir /opt/pigeonhole/ && \
     cd /opt/pigeonhole && git init . && git remote add -t ${pigeonhole_branch} origin https://github.com/dovecot/pigeonhole.git && \
     git fetch --depth=1 && git checkout ${pigeonhole_branch} && ./autogen.sh && \
     ./configure ${pigeonhole_config} && \
-    make && make install && cd .. && \
+    make -s && make install && cd .. && \
     rm -rf /opt/dovecot && \
     rm -rf /opt/pigeonhole && \
     chmod a+x /entrypoint.sh
