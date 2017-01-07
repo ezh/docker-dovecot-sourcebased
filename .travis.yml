@@ -5,8 +5,8 @@ language: java
 branches:
   only:
     - master
-  except:
-    - /^v[0-9]/
+    - /^v[0-9]+/
+
 env:
   global:
     - "COMMIT=${TRAVIS_COMMIT::8}"
