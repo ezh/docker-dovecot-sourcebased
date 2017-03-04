@@ -50,6 +50,7 @@ RUN set -x && \
     make -s && make install && cd .. && \
     rm -rf /opt/dovecot && \
     rm -rf /opt/pigeonhole && \
+    apt-get purge -y git ca-certificates wget automake autoconf pandoc libtool pkg-config gcc && \
     chmod a+x /entrypoint.sh
 
 VOLUME ["/etc/dovecot", "/var/spool/dovecot"]

@@ -8,7 +8,7 @@ Dovecot source provided by https://github.com/dovecot/core
 
 Pigeonhole source provided by https://github.com/dovecot/pigeonhole
 
-By default it builds the stable *dovecot-2.2.27* (2016 dec 03) and stable *pigeonhole-0.4.16* (2016 oct 31) if you use docker compose.
+By default it builds the stable *dovecot-2.2.28* and stable *pigeonhole-0.4.17* if you use docker compose.
 It builds the latest unstable *master* if you build directly from Dockerfile.
 
 [Hint #1](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/docker/Dockerfile#L44),
