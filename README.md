@@ -21,7 +21,14 @@ Execution
 
 Dovecot executed directly as PID 1 process with logging to `STDOUT`.
 
-Arguments
+Environment
+-----------
+
+You may provide dovecot user id with DOVECOT_USER_ID environment variable and group id with DOVECOT_GROUP_ID one.
+
+You may provide dovenull user id with DOVENULL_USER_ID environment variable and group id with DOVENULL_GROUP_ID one.
+
+Build arguments
 ---------
 
 You may set Dovecot version via `dovecot_branch` argument
