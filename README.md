@@ -1,8 +1,8 @@
 docker-dovecot-sourcebased
 ==========================
-[![Build Status](https://travis-ci.org/ezh/docker-dovecot-sourcebased.png?branch=master)](https://travis-ci.org/ezh/docker-dovecot-sourcebased) [![Pulls](https://img.shields.io/docker/pulls/ezh1k/dovecot.svg)](https://hub.docker.com/r/ezh1k/dovecot/) [![Releases](https://img.shields.io/github/release/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/releases) [![License](https://img.shields.io/github/license/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/LICENSE) 
+[![Build Status](https://travis-ci.org/ezh/docker-dovecot-sourcebased.png?branch=master)](https://travis-ci.org/ezh/docker-dovecot-sourcebased) [![Pulls](https://img.shields.io/docker/pulls/ezh1k/dovecot.svg)](https://hub.docker.com/r/ezh1k/dovecot/) [![Releases](https://img.shields.io/github/release/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/releases) [![License](https://img.shields.io/github/license/ezh/docker-dovecot-sourcebased.svg)](https://github.com/ezh/docker-dovecot-sourcebased/blob/master/LICENSE)
 
-Docker compose source based dovecot with pigeonhole SOHO configuration
+Source based Dovecot with Pigeonhole on Debian Jessie
 
 Dovecot source provided by https://github.com/dovecot/core
 
@@ -21,12 +21,12 @@ Execution
 
 Dovecot executed directly as PID 1 process with logging to `STDOUT`.
 
-Environment
+Environment variables
 -----------
 
-You may provide dovecot user id with DOVECOT_USER_ID environment variable and group id with DOVECOT_GROUP_ID one.
+You may provide **dovecot** user id with `DOVECOT_USER_ID` and group id with `DOVECOT_GROUP_ID`.
 
-You may provide dovenull user id with DOVENULL_USER_ID environment variable and group id with DOVENULL_GROUP_ID one.
+You may provide **dovenull** user id with `DOVENULL_USER_ID` and group id with `DOVENULL_GROUP_ID`.
 
 Build arguments
 ---------
